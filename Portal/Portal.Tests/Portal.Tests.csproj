@@ -82,8 +82,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\StoreControllerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
+    <Compile Include="Repositories\TestProductRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -92,11 +94,28 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Portal.Data\Portal.Data.csproj">
+      <Project>{A8BB31BD-11F8-4ED5-8ABE-E0E9824E4D39}</Project>
+      <Name>Portal.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portal.Entities\Portal.Entities.csproj">
+      <Project>{b3eed695-c089-47e8-ad0e-a2ba8d2f8790}</Project>
+      <Name>Portal.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portal.Filters\Portal.Filters.csproj">
+      <Project>{fe70c462-5402-40d4-818e-84bc05124a58}</Project>
+      <Name>Portal.Filters</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Portal.Services\Portal.Services.csproj">
+      <Project>{D8F33E6A-157C-464F-B248-5796FC10C96B}</Project>
+      <Name>Portal.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Portal\Portal.csproj">
       <Project>{561E36C5-3DAA-4122-A30E-55C14BD5B1B4}</Project>
       <Name>Portal</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
