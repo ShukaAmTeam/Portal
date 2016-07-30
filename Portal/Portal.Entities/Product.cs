@@ -18,6 +18,8 @@ namespace Portal.Entities
         public Nullable<int> TotalCount { get; set; }
         public Nullable<int> AvailableCount { get; set; }
         public Nullable<bool> IsAvailable { get; set; }
+        public string ImageUrl { get; set; }
+        public Subcategory Subcategory { get; set; }
 
         //public virtual MeasUnits MeasUnits { get; set; }      
         //public virtual ProductType ProductType { get; set; }

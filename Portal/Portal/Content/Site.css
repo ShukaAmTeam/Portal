@@ -9,6 +9,10 @@
     padding-right: 15px;
 }
 
+.footer-content {
+    position: relative;
+    clear: both;
+}
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
 */
@@ -22,3 +26,22 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.store-container {
+    position: relative;
+    align-content: center;
+    clear: both;
+}
+
+.product-details {
+    position: relative;
+    float: left;
+    margin: 4px 7px 2px 4px;
+    width: 300px;
+    border: dotted;
+}
+
+    .product-details img {
+        width: 250px;
+        margin: 2px;
+    }

@@ -282,11 +282,13 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Store\Index.cshtml" />
+    <Content Include="Views\Store\Details.cshtml" />
+    <Content Include="Views\Store\_ProductPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Product\" />
-    <Folder Include="Views\Store\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -297,6 +299,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Portal.Data\Portal.Data.csproj">
+      <Project>{A8BB31BD-11F8-4ED5-8ABE-E0E9824E4D39}</Project>
+      <Name>Portal.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Portal.Entities\Portal.Entities.csproj">
       <Project>{B3EED695-C089-47E8-AD0E-A2BA8D2F8790}</Project>
       <Name>Portal.Entities</Name>

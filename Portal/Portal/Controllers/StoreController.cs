@@ -1,10 +1,12 @@
-﻿using Portal.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Portal.Entities;
+using Portal.Services;
+using Portal.Data;
 
 namespace Portal.Controllers
 {
@@ -14,7 +16,7 @@ namespace Portal.Controllers
         private readonly StoreService _store;
 
         #region ctor
-        public StoreController() : this(new StoreService()) { }
+        public StoreController() : this(new StoreService(new DemoProductRepository(100))) { }
         public StoreController(StoreService storeService)
         {
             _store = storeService;
@@ -26,12 +28,26 @@ namespace Portal.Controllers
         [Route("")]
         public async Task<ActionResult> Index(int? id)
         {
-            if (!id.HasValue)
-                ViewData["products"] = await _store.GetProducts();
-            else
-                return View(await _store.GetProduct(id.Value));
+            try
+            {
+                IEnumerable<Product> products = null;
+                if (id.HasValue)
+                {
+                    var product = await _store.GetProduct(id.Value);
+                    if (product != null)
+                    {
+                        products = new List<Product>() { product };             
+                    }
+                }
+                else
+                    products = await _store.GetProducts();
 
-            return View();
+                return View(products);
+            }
+            catch(Exception ex)
+            {
+                throw;
+            }
         }
     }
 }
