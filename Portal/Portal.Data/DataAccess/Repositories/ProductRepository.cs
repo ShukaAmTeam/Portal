@@ -52,7 +52,7 @@ namespace Portal.Data
                 {
                     Id = i,
                     Name = "Product " + i,
-                    ImageUrl = "http://cdn32.zvooq.ru/pic?type=release&id=4274134&size=300x300&ext=jpg", 
+                    ImageUrl = "http://www.freshfoodcentral.com/uploads/Potatoes/potatoes-20060407-02.jpg", 
                     CostPrice = i * 100,
                     Price = i * 10,
                     Subcategory = new Subcategory() { Name = "Subcategory", Category = new Category() { Name = "Category" } },

@@ -1,26 +1,32 @@
 ﻿@model Portal.Entities.Product
 
-<div class="product-details">
-    <h2>@Model.Name</h2>
+<div class="item product-details">
+    <div class="product-details-big">
+        <div class="product-details-big-header">
+            <p>
+                <img alt="@Model.Name" src="@Url.Content(Model.ImageUrl)" />
+            </p>
+            </div>
+        <div class="product-details-big-footer">
+            <p>
+                <h3>@Model.Name</h3>
+            </p>
+            <div class="category-details">
+                @*<p>
+                    <em>Category:</em>
+                    @Model.Subcategory.Category.Name
 
-    <p>
-        <img alt="@Model.Name" src="@Url.Content(Model.ImageUrl)" />
-    </p>
-
-    <div class="category-details">
-        <p>
-            <em>Category:</em>
-            @Model.Subcategory.Category.Name
-
-            <em>Subcategory:</em>
-            @Model.Subcategory.Name
-        </p>
-        <p>
-            <em>Price:</em>
-            @Html.DisplayFor(m => m.Price)
-        </p>
-        <p class="button">
-            @* @Html.ActionLink("Add to Cart", "AddtoCart", new { controller = "ShoppingCart", productId = Model.Id })*@
-        </p>
+                    <em>Subcategory:</em>
+                    @Model.Subcategory.Name
+                </p>*@
+                <p>
+                    <em>Price:</em>
+                    @Html.DisplayFor(m => m.Price)
+                </p>
+                <p class="button">
+                    @* @Html.ActionLink("Add to Cart", "AddtoCart", new { controller = "ShoppingCart", productId = Model.Id })*@
+                </p>
+            </div>
+        </div>
+        </div>
     </div>
-</div>

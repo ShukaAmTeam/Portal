@@ -1,0 +1,48 @@
+﻿@model Portal.Entities.Product
+
+<div class="col-sm-4 col-lg-4 col-md-4 item">
+    <div class="thumbnail">
+        <img src="@Url.Content(Model.ImageUrl)" style="width:320px; height:150px;" alt="@Model.Name">
+        <div class="caption">
+            <h4 class="pull-right">$@Model.Price</h4>
+            <h4>
+                <a href="#">@Model.Name</a>
+            </h4>
+            <p>Description :<i>@Model.Description  Some product details <a target="_blank" href="#">Market - http://Market.am</a>.</i> </p>
+        </div>
+        <div class="ratings">
+            <p class="pull-right">15 reviews</p>
+            <p>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star glyphicon-star-empty"></span>
+            </p>
+        </div>
+    </div>
+</div>
+
+@*<div class="col-sm-4 col-lg-4 col-md-4">
+    <div class="thumbnail">
+        <img src="http://placehold.it/320x150" alt="">
+        <div class="caption">
+            <h4 class="pull-right">$24.99</h4>
+            <h4>
+                <a href="#">First Product</a>
+            </h4>
+            <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+        </div>
+        <div class="ratings">
+            <p class="pull-right">15 reviews</p>
+            <p>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+                <span class="glyphicon glyphicon-star"></span>
+            </p>
+        </div>
+    </div>
+</div>*@
+

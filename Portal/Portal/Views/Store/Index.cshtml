@@ -6,9 +6,11 @@
 }
 
 <h2>Store Index</h2>
-<div class="form-group store-container">
-    @foreach(var product in Model)
-    {
-        @Html.Partial("_ProductPartial", product)
-    }
+<div class="body-main-block">
+    <div class="form-group store-container">
+        @foreach (var product in Model)
+        {
+            @Html.Partial("_ProductPartial2", product)
+        }
+    </div>
 </div>
