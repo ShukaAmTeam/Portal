@@ -17,7 +17,7 @@ namespace Portal.Services
         {
             _products = productRepository;
         }
-
+             
         public async Task<Product> GetProduct()
         {
             return await _products.GetByIdAsync(1);
@@ -26,6 +26,11 @@ namespace Portal.Services
         public async Task<IEnumerable<Product>> GetProducts()
         {
             return await _products.GetAllAsync();
+        }
+
+        public async Task<Product> GetProductById(int id)
+        {
+            return await _products.GetByIdAsync(id);
         }
     }
 }

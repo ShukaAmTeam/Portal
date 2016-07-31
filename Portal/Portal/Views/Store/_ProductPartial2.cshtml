@@ -1,12 +1,16 @@
 ﻿@model Portal.Entities.Product
 
+@{
+    string productDetaisUrl = Request.Url.AbsoluteUri.Replace(Request.Url.AbsolutePath, "").ToString() + "/product/details/" + Model.Id;
+}
+
 <div class="col-sm-4 col-lg-4 col-md-4 item">
     <div class="thumbnail">
         <img src="@Url.Content(Model.ImageUrl)" style="width:320px; height:150px;" alt="@Model.Name">
         <div class="caption">
             <h4 class="pull-right">$@Model.Price</h4>
             <h4>
-                <a href="#">@Model.Name</a>
+                <a href="@productDetaisUrl">@Model.Name</a>
             </h4>
             <p>Description :<i>@Model.Description  Some product details <a target="_blank" href="#">Market - http://Market.am</a>.</i> </p>
         </div>

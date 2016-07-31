@@ -288,10 +288,13 @@
     <Content Include="Views\Shared\_MenuPartial.cshtml" />
     <Content Include="Views\Store\_CarouselPartial.cshtml" />
     <Content Include="Views\Store\_ProductPartial2.cshtml" />
+    <Content Include="Views\Shared\_ShoppingCartPartial.cshtml" />
+    <Content Include="Views\Store\_StoreLayout.cshtml" />
+    <Content Include="Views\Product\_ProductLayout.cshtml" />
+    <Content Include="Views\Product\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Product\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

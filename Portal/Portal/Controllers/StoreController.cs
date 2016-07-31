@@ -30,6 +30,7 @@ namespace Portal.Controllers
         {
             try
             {
+                var x = Request.Url;
                 IEnumerable<Product> products = null;
                 if (id.HasValue)
                 {

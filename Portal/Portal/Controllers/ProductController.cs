@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Portal.Entities;
 using Portal.Services;
 using System.Threading.Tasks;
+using Portal.Data;
 
 namespace Portal.Controllers
 {
@@ -15,14 +16,14 @@ namespace Portal.Controllers
         private readonly ProductService _products;
 
         #region ctor
-        public ProductController() : this(new ProductService()) { }
+        public ProductController() : this(new ProductService(new DemoProductRepository(100))) { }
         public ProductController(ProductService productService)
         {
             _products = productService;
         }
         #endregion ctor
 
-        // GET: Product
+        // GET: Product/
         [Route("")]
         public async Task<ActionResult> Index()
         {
@@ -34,6 +35,29 @@ namespace Portal.Controllers
             catch (Exception ex)
             {
                 return HttpNotFound();
+            }
+        }
+       
+        // GET: Product/Details/{id}
+        [HttpGet]
+        [Route("Details/{id}")]
+        public async Task<ActionResult> Details(int? id)
+        {
+            try
+            {
+                if (!id.HasValue)
+                    return HttpNotFound();
+                
+                var product = await _products.GetProductById(id.Value);
+
+                if (product == null)                
+                    return HttpNotFound();
+                
+                return View(product);
+            }
+            catch (Exception ex)
+            {
+                throw;
             }
         }
     }
